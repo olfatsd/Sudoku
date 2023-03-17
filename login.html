@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet">
+    </head>
+    <body id="color">
+        <div id="loginDiv">
+            <h1 id="img"><img src="img/sudoku.png" alt="sudoku photo"></h1><br><br>
+            <input type="text" id="userName" class="look">
+            <br>
+            <p id="nameError" class="error look">Username must be only
+                Characters</p>
+            <input type="password" id="password" class="look">
+            <br>
+            <p id="passError" class="error look">Password must be only Numbers</p><br><br>
+            <button class="submit" onclick="show()">ENTER</button>
+            <script src='script.js'></script>
+        </div>
+        <div id="difficultyDiv" class="container">
+            <h1 id="greeting" class="look"></h1>
+            <h2 id="look2">Difficulty Level</h2>
+            <br>
+            <div id="difLevel" class="container">
+                <div id="dif1" class="levelNum container" onclick="level(1)">1</div>
+                <div id="dif2" class="levelNum container" onclick="level(2)">2</div>
+                <div id="dif3" class="levelNum container" onclick="level(3)">3</div>
+            </div>
+        </div>
+        <div id="sudokuDiv">
+            <h1 id="h1" class="look">SUDOKU</h1>
+            <div id="puzzle"></div>
+            <script src='sudoku.js'></script>
+            <br>
+            <div class="container">
+                <div class="container">
+                    <button class="submit" onclick="clearButton()">clear</button>
+                </div>
+                <div class="container">
+                    <button class="submit" onclick="finish()">finish</button>
+                </div>
+                <div class="container">
+                    <button id="hint" class="submit" onclick="hint()">hint</button>
+                </div>
+                <div class="container">
+                    <button id="back" class="submit" onclick="back()">back</button>
+                </div>
+            </div>
+        </div>
+        <div id="finishDiv" class="container">
+            <h2 id="look2">Well Done</h2>
+            <br>
+            <h3 class="look">would you like to play another game?</h3>
+            <br>
+            <div class="container">
+                <button id="yes" class="submit" onclick="again(1)">YES</button>
+            </div>
+            <div class="container">
+                <button id="no" class="submit" onclick="again(0)">NO</button>
+            </div>
+        </div>
+        <div id="loseDiv" class="container">
+            <h2 id="look2">YOU LOSE</h2>
+            <br>
+            <h3 class="look">would you like to play another game?</h3>
+            <br>
+            <div class="container">
+                <button id="yes" class="submit" onclick="again(1)">YES</button>
+            </div>
+            <div class="container">
+                <button id="no" class="submit" onclick="again(0)">NO</button>
+            </div>
+        </div>
+    </body>
+</html>
